@@ -49,8 +49,7 @@ class TrainPipeline:
 
     
     def start_data_validation(
-        self, data_ingestion_artifact: DataIngestionArtifact
-    ) -> DataValidationArtifact:
+        self, data_ingestion_artifact: DataIngestionArtifact) -> DataValidationArtifact:
         logging.info("Entered the start_data_validation method of TrainPipeline class")
 
         try:
@@ -75,8 +74,7 @@ class TrainPipeline:
 
 
     
-    def start_model_trainer(self
-    ) -> ModelTrainerArtifact:
+    def start_model_trainer(self) -> ModelTrainerArtifact:
         try:
             model_trainer = ModelTrainer(
                 model_trainer_config=self.model_trainer_config,
